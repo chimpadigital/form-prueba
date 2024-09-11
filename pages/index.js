@@ -1,9 +1,8 @@
 // pages/index.js
 import { useState } from 'react';
 import "./styles/global.css";
-import { Input, Button, Radio, Select, Spacer, Grid } from '@nextui-org/react';
 import Image from './images/logo-el-delta.png'
-
+import { Input, Button, Radio, Select, Spacer, Grid } from '@nextui-org/react';
 export default function Home() {
   const [formData, setFormData] = useState({
     nombre: '',
@@ -47,14 +46,14 @@ export default function Home() {
       {submitted && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75">
           <div className="text-center">
-            <img src="/logo-el-delta.png" alt="Logo El Delta" className="mx-auto mb-4 w-24 h-24" />
+            <img src={Image.src} alt="Logo El Delta" className="mx-auto mb-4 w-24 h-24" />
             <h2 className="text-3xl font-bold text-white mb-4">¡Gracias!</h2>
             <p className="text-lg text-white">Un asesor te contactará pronto.</p>
           </div>
         </div>
       )}
       <div className="flex flex-col items-center">
-        <img src="/logo-el-delta.png" alt="Logo El Delta" className="mb-4 w-32 h-32" />
+        <img src={Image.src} alt="Logo El Delta" className="mb-4 w-32 h-32" />
         <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
           <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">Simulador de Inversión</h1>
           <form onSubmit={handleSubmit}>
